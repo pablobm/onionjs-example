@@ -1,0 +1,2 @@
+class ProgsController < ApplicationController
+end

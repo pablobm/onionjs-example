@@ -1,0 +1,43 @@
+<div id="app">
+
+  <div data-child="tabbedPanels">
+    <div><a href="#" class="action-add">Add room</a></div>
+
+    <div data-child="studioOverview">
+      <h3>Overview <a href="#" class="action-edit">Edit</a></h3>
+      <p>This is the studio overview. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit faucibus arcu, nec facilisis quam lacinia vitae. Aenean nec turpis massa. Curabitur commodo lobortis ante nec imperdiet. In a convallis enim. Proin sit amet quam libero, vitae ullamcorper ipsum. Mauris posuere mattis auctor.</p>
+    </div>
+
+      <div data-child="roomTabs">
+        <div data-child-item="1">
+          <p><a href="#">one</a></p>
+        </div>
+        <div data-child-item="2">
+          <p><a href="#">two</a></p>
+        </div>
+        <div data-child-item="3">
+          <p><a href="#">three</a></p>
+        </div>
+      </div>
+
+      <div data-child="roomPanels">
+        <div data-child-item="1">
+          <h3>Estudio uno <a href="#" class="action-delete">[x]</a></h3>
+          <p>Este es el studio uno.</p>
+        </div>
+        <div data-child-item="2">
+          <h3>Room two <a href="#" class="action-delete">[x]</a></h3>
+          <p>This is room two.</p>
+        </div>
+        <div data-child-item="3">
+          <h3>Zimmer drei <a href="#" class="action-delete">[x]</a></h3>
+          <p>Dieser ist Zimmer drei.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <%= onionjs_app('prog_app', {}, {anchor: true, base: 'body'}) %>
+
+</div>
