@@ -55,6 +55,10 @@ module OnionjsExample
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << Rails.root.join('app/assets/modules')
+
+    # Make sure require.js picks up our mustache in production
+    config.requirejs.logical_asset_filter += [/\.mustache$/]
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
