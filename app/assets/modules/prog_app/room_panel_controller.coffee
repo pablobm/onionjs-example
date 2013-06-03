@@ -25,7 +25,7 @@ define [
       if !opts.anchor
         @view.render({@room})
 
-    @after 'ready', ->
+    @after 'domReady', ->
       console.log("RoomPanelController #{@room.id()} ready")
       @updateView()
 

@@ -34,7 +34,7 @@ define [
     @after 'init', ->
       console.log('TabbedPanelsController init')
 
-    @after 'ready', ->
+    @after 'domReady', ->
       console.log('TabbedPanelsController ready')
 
       @rooms.forEach (room) =>

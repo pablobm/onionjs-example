@@ -23,5 +23,5 @@ define [
       if !opts.anchor
         @view.render({@room})
 
-    @after 'ready', ->
+    @after 'domReady', ->
       console.log("RoomTabController #{@room.id()} ready")
