@@ -1,5 +1,6 @@
-PATH
-  remote: ../onionjs
+GIT
+  remote: git@github.com:pablobm/onionjs.git
+  revision: 91fa7c0c1995257f633460bc71e0757278669af6
   specs:
     onionjs (0.0.1)
 
