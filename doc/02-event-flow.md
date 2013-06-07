@@ -19,12 +19,7 @@ We are going to build a new OnionJS app. This time there will be more files than
 
 This is the simple application we will be building here:
 
-============================
-============================
-Link or embed the app here
-============================
-============================
-============================
+##[Link or embed the app here]
 
 Let's have a look at the code, reviewing one element at a time.
 
@@ -160,12 +155,7 @@ I mentioned the concept of "children controllers" above. Well, these are those. 
 
 In this example application, the hierarchy is the following:
 
-============================
-============================
-Nice graph of the hierarchy
-============================
-============================
-============================
+##[Nice graph of the hierarchy]
 
 For simplicity, in this example there are only two levels in the tree, but there could be as many as deemed necessary. Let's now have a look at these other controllers and see how they participate in the architecture of the app.
 
