@@ -155,7 +155,7 @@ I mentioned the concept of "children controllers" above. Well, these are those. 
 
 In this example application, the hierarchy is the following:
 
-##[Nice graph of the hierarchy]
+![Controller hierarchy](controller_hierarchy.png)
 
 For simplicity, in this example there are only two levels in the tree, but there could be as many as deemed necessary. Let's now have a look at these other controllers and see how they participate in the architecture of the app.
 
