@@ -31,6 +31,5 @@ define [
       @newModel 'rooms', new Collection([new Room(id: 1), new Room(id: 2), new Room(id: 3)])
       @newModel 'tabs', tabs
 
-    @after 'domReady', ->
-      console.log('domReady')
-      @setChild 'tabbedPanels', TabbedPanelsController, {}, {anchor: true}
+    run: ->
+      @spawn TabbedPanelsController

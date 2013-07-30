@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'requirejs-rails'
-gem 'onionjs', git: 'git@github.com:pablobm/onionjs.git'
+gem 'onionjs', git: 'git@github.com:pablobm/onionjs.git', branch: 'used-by-example'
 
 
 # Gems used only for assets and not required

@@ -22,11 +22,10 @@ define [
 
     @after 'init', (models, opts) ->
       console.log("RoomPanelController #{@room.id()} init")
-      if !opts.anchor
-        @view.render({@room})
 
-    @after 'domReady', ->
-      console.log("RoomPanelController #{@room.id()} ready")
+    run: ->
+      if ! @view.isRendered()
+        @view.render({@room})
       @updateView()
 
     updateView: ->

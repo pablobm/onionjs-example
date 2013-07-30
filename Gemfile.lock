@@ -1,6 +1,7 @@
 GIT
   remote: git@github.com:pablobm/onionjs.git
-  revision: 91fa7c0c1995257f633460bc71e0757278669af6
+  revision: c0cc5ffc93af9dd1f5f2bb3996395d6632416b19
+  branch: used-by-example
   specs:
     onionjs (0.0.1)
 

@@ -1,5 +1,5 @@
 define [
-  'onion/mustache_view'
+  'lib/mustache_view'
   'onion/vendor/text!prog_app/room_panel.mustache'
 ], (
   MustacheView
@@ -13,7 +13,7 @@ define [
     @onDom '.action-delete', 'click', 'delete'
 
     hide: ->
-      @$dom().hide()
+      @$().hide()
 
     show: ->
-      @$dom().show()
+      @$().show()

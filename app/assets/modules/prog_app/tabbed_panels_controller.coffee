@@ -22,22 +22,20 @@ define [
       @view.doEdit()
 
     @onView 'add', ->
-      newId = @rooms.length+1
+      newId = @rooms.last().id()+1
       @rooms.add(new Room(id: newId))
-      console.log('adding', newId)
       @tabs.add(newId)
 
     @onModel 'rooms', 'add', (room) ->
-      @setChild ['roomTabs', room.id()], RoomTabController, {room, roomInCollection: @rooms.membershipFor(room)}
-      @setChild ['roomPanels', room.id()], RoomPanelController, {room, roomInCollection: @rooms.membershipFor(room)}
+      roomInCollection = @rooms.membershipFor(room)
+      @spawnWithModel RoomPanelController, 'room', room, models: {roomInCollection}
+      @spawnWithModel RoomTabController, 'room', room, models: {roomInCollection}
 
     @after 'init', ->
       console.log('TabbedPanelsController init')
 
-    @after 'domReady', ->
-      console.log('TabbedPanelsController ready')
-
+    run: ->
       @rooms.forEach (room) =>
         roomInCollection = @rooms.membershipFor(room)
-        @setChild ['roomTabs', room.id()], RoomTabController, {room, roomInCollection}, {anchor: true}
-        @setChild ['roomPanels', room.id()], RoomPanelController, {room, roomInCollection}, {anchor: true}
+        @spawnWithModel RoomPanelController, 'room', room, models: {roomInCollection}
+        @spawnWithModel RoomTabController, 'room', room, models: {roomInCollection}

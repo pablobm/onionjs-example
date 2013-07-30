@@ -1,5 +1,5 @@
 define [
-  'onion/mustache_view'
+  'lib/mustache_view'
   'onion/vendor/text!prog_app/room_tab.mustache'
 ], (
   MustacheView

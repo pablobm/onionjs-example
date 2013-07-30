@@ -20,8 +20,7 @@ define [
 
     @after 'init', (models, opts) ->
       console.log("RoomTabController #{@room.id()} init")
-      if !opts.anchor
-        @view.render({@room})
 
-    @after 'domReady', ->
-      console.log("RoomTabController #{@room.id()} ready")
+    run: ->
+      if ! @view.isRendered()
+        @view.render({@room})

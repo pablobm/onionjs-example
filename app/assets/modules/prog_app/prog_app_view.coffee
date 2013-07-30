@@ -1,5 +1,5 @@
 define [
-  'onion/mustache_view'
+  'lib/mustache_view'
 ], (
   MustacheView
 ) ->
